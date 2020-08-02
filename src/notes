@@ -1,0 +1,92 @@
+BOARD.JS
+
+export default function Board() {
+  // create state
+  // * boardState
+  const [boardSquares, setBoardSquares] = useState(Array(9).fill(null))
+  // * turnState
+  const [xIsNext, setXIsNext] = useState(true)
+  // handleClick
+  const handleClick = (i) => {
+    // * copy of board state
+    const squares = [...boardSquares]
+    // * if the index of the board is filled, will just return
+    if (calculateWinner(boardSquares) || squares[i]) return
+    // * add X or O by using ternary 
+    squares[i] = xIsNext ? "X" : "O"
+    // calculate next turn
+
+    // setState of the board and turn 
+    setBoardSquares(squares)
+    setXIsNext(!xIsNext)
+  }
+
+  // create a render square function
+  const renderSquare = (i) => {
+    return (
+      <Square
+        value={boardSquares[i]}
+        onClick={() => handleClick(i)}
+      />
+    )
+  }
+
+  // set status
+  let status
+  const winner = calculateWinner(boardSquares)
+  status = winner
+    ? `${winner} wins the game`
+    : `${xIsNext ? "Dwight" : "Michael"}'s turn`
+
+
+  return (
+    <BoardContainer>
+      <div>{status}</div>
+      <div>{renderSquare(0)}{renderSquare(1)}{renderSquare(2)}</div>
+      <div>{renderSquare(3)}{renderSquare(4)}{renderSquare(5)}</div>
+      <div>{renderSquare(6)}{renderSquare(7)}{renderSquare(8)}</div>
+    </BoardContainer>
+  )
+}
+
+SQUARE.JS
+
+// value (props) and onClick (props) function when it's clicked
+
+export default function Square(props) {
+  return (
+    <SquareButton
+      onClick={props.onClick}>
+      {props.value}
+    </SquareButton>
+  )
+}
+
+
+
+export function calculateWinner(squares) {
+  // get our set of the winner
+  const winningLines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ]
+  // loop through this set
+  for (let i = 0; i < winningLines.length; i++) {
+    // check to see is the value in square array fulfill the winner
+    const [a, b, c] = winningLines[i]
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      // is so, it will return either X or O
+      return squares[a];
+    }
+  }
+  // else, return nothing
+  return null;
+}
+
+
