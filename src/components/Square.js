@@ -1,16 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
+import { SquareButton } from '../styled'
 
-export const SquareButton = styled.button`
-  width: 100px;
-  height: 100px;
-`
-
-export default function Square(props) {
+export default function Square({ value, onClick }) {
+  const style = value ? `squares ${value}` : `squares`
   return (
     <SquareButton
-      onClick={props.onClick}>
-      {props.value}
+      className={style}
+      onClick={onClick}>
+      {value}
     </SquareButton>
   )
 }

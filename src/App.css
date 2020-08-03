@@ -3,3 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.squares {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ignorant {
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.5s ease;
+}
