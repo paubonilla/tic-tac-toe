@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/tic-tac-toe/static/css/main.4c1bc847.chunk.css",
+    "main.js": "/tic-tac-toe/static/js/main.3044b89c.chunk.js",
+    "main.js.map": "/tic-tac-toe/static/js/main.3044b89c.chunk.js.map",
+    "runtime-main.js": "/tic-tac-toe/static/js/runtime-main.df28867d.js",
+    "runtime-main.js.map": "/tic-tac-toe/static/js/runtime-main.df28867d.js.map",
+    "static/js/2.0034afb0.chunk.js": "/tic-tac-toe/static/js/2.0034afb0.chunk.js",
+    "static/js/2.0034afb0.chunk.js.map": "/tic-tac-toe/static/js/2.0034afb0.chunk.js.map",
+    "index.html": "/tic-tac-toe/index.html",
+    "precache-manifest.5b3448a74c2a3445955dfd31c783eb36.js": "/tic-tac-toe/precache-manifest.5b3448a74c2a3445955dfd31c783eb36.js",
+    "service-worker.js": "/tic-tac-toe/service-worker.js",
+    "static/css/main.4c1bc847.chunk.css.map": "/tic-tac-toe/static/css/main.4c1bc847.chunk.css.map",
+    "static/js/2.0034afb0.chunk.js.LICENSE.txt": "/tic-tac-toe/static/js/2.0034afb0.chunk.js.LICENSE.txt",
+    "static/media/michael-scott.png": "/tic-tac-toe/static/media/michael-scott.b09e93bf.png",
+    "static/media/the-office-theme-song.mp3": "/tic-tac-toe/static/media/the-office-theme-song.45ddc095.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df28867d.js",
+    "static/js/2.0034afb0.chunk.js",
+    "static/css/main.4c1bc847.chunk.css",
+    "static/js/main.3044b89c.chunk.js"
+  ]
+}
