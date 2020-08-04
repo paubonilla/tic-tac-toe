@@ -43,7 +43,7 @@ export default function Board() {
   status = winner
     ? `${winner} wins the game`
     : `${xIsNext ? "Dwight" : "Michael"}'s turn`
-  dwight = `${winner ? "Dwight you ignorant slut" : ""}`
+  dwight = `${winner ? "Dwight you ignorant " : ""}`
 
   return (
     <>
