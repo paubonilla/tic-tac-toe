@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Square from './Square'
-import { calculateWinner } from '../winner'
-import { BoardContainer } from '../styled'
+import Square from '../Square/Square'
+import { calculateWinner } from '../../winner'
+import { BoardContainer } from '../Board/index'
 // import dwight from '../images/dwight.png'
 // import michael from '../images/michael.png'
 
@@ -43,7 +43,7 @@ export default function Board() {
   status = winner
     ? `${winner} wins the game`
     : `${xIsNext ? "Dwight" : "Michael"}'s turn`
-  dwight = `${winner ? "Dwight you ignorant " : ""}`
+  dwight = `${winner ? "Dwight you ignorant..." : ""}`
 
   return (
     <>

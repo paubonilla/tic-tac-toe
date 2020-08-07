@@ -1,5 +1,5 @@
 import React from 'react'
-import { SquareButton } from '../styled'
+import { SquareButton } from '../Square/index'
 
 export default function Square({ value, onClick }) {
   const style = value ? `squares ${value}` : `squares`
