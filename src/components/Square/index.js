@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const SquareButton = styled.button`
   width: 100px;
   height: 100px;
+  @media (max-width: 320px) {
+    width: 85px;
+    height: 85px;
+  }
   margin: 2px;
   border: 1px solid #4a2908;
   border-radius: 0px;

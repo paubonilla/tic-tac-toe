@@ -42,6 +42,12 @@ export const Image = styled.img`
 export const TheOffice = styled.div`
   > p {
     font-size: 80px;
+    @media (max-width: 480px) {
+      font-size: 70px;
+    }
+    @media (max-width: 320px) {
+      font-size: 60px;
+    }
     color: #fff;
     text-shadow: 1px 1px black;
     font-family: 'Special Elite', cursive;
